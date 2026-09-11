@@ -63,7 +63,7 @@ ClojureScript.
 ```sh
 clojure -M:test          # JVM
 clojure -M:lint          # clj-kondo
-nbb --classpath src:test scripts/cljs_test_runner.cljs
+nbb --classpath src:test scripts/cljs_test_runner.cljk
 ```
 
 ## Background
