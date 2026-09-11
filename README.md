@@ -55,15 +55,15 @@ runtimes genuinely disagree (unsigned 64-bit arithmetic).
 
 ## Tests
 
-The CI runs the same suite twice — `clojure -M:test` on the JVM and the
+The CI runs the same suite twice — `kbb -M:test` on the JVM and the
 same deftests under nbb — because the u64 seam is exactly where the two
 runtimes disagree, and a green JVM suite is not evidence for
 ClojureScript.
 
 ```sh
-clojure -M:test          # JVM
-clojure -M:lint          # clj-kondo
-nbb --classpath src:test scripts/cljs_test_runner.cljk
+kbb -M:test          # JVM
+kbb -M:lint          # clj-kondo
+kbb --backend sci --classpath src:test scripts/cljs_test_runner.cljk
 ```
 
 ## Background
